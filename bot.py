@@ -17,5 +17,7 @@ async def on_ready():
   
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
 
-
+@client.command(name='주사위')
+async def roll(ctx):
+  await ctx.send('주사위를 굴립니다')
 client.run(os.environ['token'])
